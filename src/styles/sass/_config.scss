@@ -1,0 +1,22 @@
+$pantone_300: #005EB8;
+
+@mixin transition_ease {
+    transition: all 400ms ease-in-out;
+}
+
+@mixin transition_font {
+    opacity: 1;
+    transition: all 400ms ease-in-out;
+}
+
+@mixin media-sm {
+    @media screen and (min-width: 600px){
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 960px){
+        @content;
+    }
+}

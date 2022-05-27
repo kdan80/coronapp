@@ -1,0 +1,129 @@
+* {
+  font-family: "Roboto", "Arial", "sans-serif";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  color: #383838;
+}
+
+body, html, #root {
+  height: 100%;
+  min-height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app__root {
+  height: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.mainContent {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.map {
+  height: 100%;
+}
+.map__title {
+  font-size: 1.4rem;
+  overflow: hidden;
+}
+.map__localAuthority {
+  transition: all 0.4s ease-in-out;
+  fill: #005EB8;
+  stroke: #fff;
+  cursor: pointer;
+}
+.map__localAuthority:hover {
+  fill: #6cb7ff;
+}
+.map__Scotland {
+  fill: transparent;
+}
+
+.metrics {
+  width: 100%;
+}
+.metrics__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.metrics__table th {
+  background-color: #777;
+  color: #fff;
+}
+.metrics__table tr, .metrics__table th, .metrics__table td {
+  text-align: start;
+  padding: 0.25em;
+}
+.metrics__table tr:nth-child(even) {
+  background-color: #e0e0e0;
+}
+.metrics__table .col1 {
+  width: 70%;
+}
+.metrics__table .col2 {
+  width: 30%;
+}
+
+@media screen and (min-width: 600px) {
+  .app__root {
+    height: 100%;
+    padding: 2em;
+    gap: 5em;
+    background-color: #f9f9f9;
+    justify-content: flex-start;
+  }
+
+  .mainContent {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-height: 60%;
+    padding: 2em;
+    gap: 2em;
+    background-color: #fff;
+  }
+
+  .map__title {
+    font-size: 1.6rem;
+  }
+
+  .metrics {
+    width: 22em;
+  }
+}
+@media screen and (min-width: 960px) {
+  .app__root {
+    padding: 2em;
+    gap: 3em;
+  }
+
+  .mainContent {
+    max-height: 80%;
+  }
+
+  .map__title {
+    font-size: 1.6rem;
+  }
+}/*# sourceMappingURL=main.css.map */
