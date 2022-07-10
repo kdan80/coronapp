@@ -17,7 +17,7 @@ const useFetchData = () => {
             setData(local_data.data[0]);
 
         } catch(err){
-            console.log(err);
+            process.stderr.write(err);
         } 
     }
 
@@ -32,7 +32,8 @@ const useFetchData = () => {
             setData(national_data.data[0]);
             
         } catch(err){
-            console.log(err);
+            process.stderr.write(err);
+            //console.log(err);
         }
     }
   
