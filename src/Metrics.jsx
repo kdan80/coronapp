@@ -18,27 +18,47 @@ const Metrics = ({data, mapTitle}) => {
                 
                 <tbody>
                     <tr>
-                        <td className="col1">Deaths</td>
-                        <td className="col2">{data.cumDeaths28DaysByPublishDate.toLocaleString()}</td>
-                    </tr>
-                    <tr>
-                        <td className="col1">New Cases</td>
+                        <td className="col1">Total Cases</td>
                         <td className="col2">
                             {
-                                data.newCasesByPublishDate
-                                    ? data.newCasesByPublishDate.toLocaleString()
+                                data.cumulativeCases
+                                    ? data.cumulativeCases.toLocaleString()
+                                    : "no data"
+                            }
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td className="col1">7 Day Average</td>
+                        <td className="col2">
+                            {
+                                data.dailyCases
+                                    ? data.dailyCases.toLocaleString()
                                     : "no data"
                             }
                         </td>
                     </tr>
                     <tr>
-                        <td className="col1">Weekly Cases</td>
-                        <td className="col2">{data.cumWeeklyCasesBySpecimenDate.toLocaleString()}</td>
+                        <td className="col1">New Deaths</td>
+                        <td className="col2">
+                            {
+                                data.dailyDeaths
+                                    ? data.dailyDeaths.toLocaleString()
+                                    : "no data"
+                            }
+                        </td>
                     </tr>
                     <tr>
-                        <td className="col1">Total Cases</td>
-                        <td className="col2">{data.cumCasesByPublishDate.toLocaleString()}</td>
+                        <td className="col1">Total Deaths</td>
+                        <td className="col2">
+                            {
+                                data.cumulativeDeaths
+                                    ? data.cumulativeDeaths.toLocaleString()
+                                    : "no data"
+                            }
+                        </td>
                     </tr>
+                    
                 </tbody>
 
                 <tfoot>

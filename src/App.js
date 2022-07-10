@@ -3,7 +3,7 @@ import Map from "./Map/Map";
 import Metrics from "./Metrics";
 import useFetchData from "./useFetchData";
 
-function App() {
+const App = () => {
 
   const [mapTitle, setMapTitle] = useState("Scotland");
   const [localAuthorityInFocus, setLocalAuthorityInFocus] = useState("")
@@ -11,11 +11,10 @@ function App() {
 
   useEffect(() => {
     fetchNationalData();
-  }, [fetchNationalData])
+  }, [])
   
     return (
         <div className="app__root">
-            {console.log(data)}
             <h1>Corona App</h1>
             <div className="mainContent">
                 <Map setMapTitle={setMapTitle} mapTitle={mapTitle} fetchLocalData={fetchLocalData} fetchNationalData={fetchNationalData} setLocalAuthorityInFocus={setLocalAuthorityInFocus} />
